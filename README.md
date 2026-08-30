@@ -1,4 +1,4 @@
-<img src="assets/intro-r.svg" alt="Intro R logo" width="120">
+<img src="assets/intro-r.svg" alt="Intro R logo" width="120" align="center">
 
 # Intro to R (2026)
 
