@@ -8,6 +8,10 @@ This course provides an introduction to the statistical programming language R. 
 
 Upon successful completion of the course, students are capable of performing the complete workflow of a quantitative research project in R before conducting an analysis. This includes basic R programming, data import, data cleaning and wrangling, exploratory data analysis and visualization. Additionally, students will perform coding exercises on their own.
 
+## Instructors
+
+[Johann-Friedrich Salzmann](https://www.sowi.uni-mannheim.de/gschwend/team/postdocs-and-doctoral-students/joff-salzmann/) and [Joshua Elias Schmidt Rodrigues](https://www.sowi.uni-mannheim.de/gschwend/team/postdocs-and-doctoral-students/joshua-schmidt-rodrigues/)
+
 ## Helpful Links
 
 - [Syllabus](resouces/Syllabus%20Intro%20to%20R%202026.pdf)
