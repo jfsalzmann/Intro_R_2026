@@ -260,60 +260,10 @@ parties_df |> slice(c(2, 3))
 # ============================================================
 # 10. TRY IT: POPULIST SUPPORT ACROSS FEDERAL STATES ----
 # ============================================================
-# same shape as parties_df, plus a state column -- fictional AfD/BSW results
-# per Bundesland (federal state); both count as "populist" here
-
-polls_by_state <- tribble(
-  ~state,                 ~party, ~vote_share,
-  "Sachsen",              "AfD",  32.4,
-  "Sachsen",              "BSW",  11.8,
-  "Sachsen",              "CDU",  31.9,
-  "Sachsen",              "SPD",   7.5,
-  "Thüringen",            "AfD",  34.6,
-  "Thüringen",            "BSW",  13.1,
-  "Thüringen",            "CDU",  23.6,
-  "Thüringen",            "SPD",   6.1,
-  "Brandenburg",          "AfD",  29.2,
-  "Brandenburg",          "BSW",  12.4,
-  "Brandenburg",          "CDU",  15.8,
-  "Brandenburg",          "SPD",  30.9,
-  "Bayern",               "AfD",  18.0,
-  "Bayern",               "BSW",   6.5,
-  "Bayern",               "CDU",  37.0,
-  "Bayern",               "SPD",   8.4,
-  "Baden-Württemberg",    "AfD",  15.4,
-  "Baden-Württemberg",    "BSW",   4.2,
-  "Baden-Württemberg",    "CDU",  24.1,
-  "Baden-Württemberg",    "SPD",   9.7,
-  "Nordrhein-Westfalen",  "AfD",  14.2,
-  "Nordrhein-Westfalen",  "BSW",   5.1,
-  "Nordrhein-Westfalen",  "CDU",  34.6,
-  "Nordrhein-Westfalen",  "SPD",  22.1,
-  "Bremen",               "AfD",   9.8,
-  "Bremen",               "BSW",   3.2,
-  "Bremen",               "CDU",  22.5,
-  "Bremen",               "SPD",  26.0,
-  "Hamburg",              "AfD",   8.9,
-  "Hamburg",              "BSW",   2.8,
-  "Hamburg",              "CDU",  22.9,
-  "Hamburg",              "SPD",  30.2
-)
-polls_by_state
-
-populist_results <- polls_by_state |> filter(party %in% c("AfD", "BSW"))
-populist_results
-
-# an absolute majority -- none reach it here
-majority <- populist_results |> filter(vote_share >= 50)
-majority
-nrow(majority)
-
-# over the blocking minority (Sperrminorität): can block a 2/3-majority vote
-blocking_minority <- populist_results |> filter(vote_share >= 33.3)
-blocking_minority
-blocking_minority |> pull(state)
-
-# over the 5% entry threshold
-cleared_threshold <- populist_results |> filter(vote_share >= 5)
-cleared_threshold |> pull(state) |> unique()
-cleared_threshold |> pull(vote_share) |> mean()
+# same shape as parties_df, plus a state column -- fictional AfD/BSW
+# results per Bundesland (federal state); both count as "populist" here
+#
+# Your task: filter down to just the AfD/BSW rows, then find out -- does
+# any state cross an absolute majority (>=50%)? Which states cross the
+# blocking minority (Sperrminoritaet, >=33.3%)? And what's the average
+# vote share among rows that clear the 5% entry threshold?
