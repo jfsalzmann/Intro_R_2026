@@ -22,6 +22,7 @@ Upon successful completion of the course, students are capable of performing the
 Day-by-day materials are added here as the course progresses.
 
 - [`d01/`](d01) — Day 1: The Logic of Programming and the R Environment
+- [`d02/`](d02) — Day 2: Data Visualization
 
 ## Content
 
