@@ -267,10 +267,3 @@ polls |>
 # and when -- it crosses the 5% electoral threshold. A reference line at
 # 5% helps make the answer visible at a glance.
 
-
-# ============================================================
-# 17. TRY IT: AfD VS. SPD -- A NEGATIVE CORRELATION ----
-# ============================================================
-# Your task: check whether AfD and SPD support move in opposite
-# directions. Pair each poll's AfD and SPD share into one row per poll,
-# then plot one against the other, overall and split out by year.
