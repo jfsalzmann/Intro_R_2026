@@ -137,7 +137,29 @@ grid |>
 
 
 # ============================================================
-# 6. TRY IT: WHO CLEARED THE THRESHOLD? ----
+# 6. ROWWISE ----
+# ============================================================
+# a function for computing the smaller poll result of two parties
+
+weakest_party_result <- function(party1, party2) {
+  min(party1, party2)
+}
+
+# works well with just numbers supplied
+weakest_party_result(13, 14)
+
+# but not within a data frame
+polls |> head(100) |>
+  mutate(weakest = weakest_party_result(FDP, Linke))
+
+# this one does, however
+polls |> head(100) |>
+  rowwise() |>
+  mutate(weakest = weakest_party_result(FDP, Linke))
+
+
+# ============================================================
+# 7. TRY IT: WHO CLEARED THE THRESHOLD? ----
 # ============================================================
 # Your task: write a function that reports whether a party's poll share
 # cleared a threshold (default: the 5% electoral threshold). Use it to
@@ -146,14 +168,14 @@ grid |>
 
 
 # ============================================================
-# 7. TRY IT: COUNTING WHO CLEARED ----
+# 8. TRY IT: COUNTING WHO CLEARED ----
 # ============================================================
 # Your task: using the latest poll, report every party's threshold status
 # one at a time, and count how many parties cleared it.
 
 
 # ============================================================
-# 8. TRY IT: AVERAGE SHARE BY POLLSTER ----
+# 9. TRY IT: AVERAGE SHARE BY POLLSTER ----
 # ============================================================
 # Your task: compute each pollster's average share for every party, one
 # pollster-party combination at a time.
