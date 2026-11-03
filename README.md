@@ -23,6 +23,8 @@ Day-by-day materials are added here as the course progresses.
 
 - [`d01/`](d01) — Day 1: The Logic of Programming and the R Environment
 - [`d02/`](d02) — Day 2: Data Visualization
+- [`d03/`](d03) — Day 2: Data Manipulation
+- [`d04/`](d04) — Day 2: R Programming
 
 ## Content
 
